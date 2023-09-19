@@ -4,10 +4,7 @@
  
 @layer base {
   :root {
-    /* --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%; */
-
-    --background: 228 24% 16%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -39,7 +36,10 @@
   }
  
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%; */
+
+    --background: 228 24% 16%;
     --foreground: 210 40% 98%;
  
     --card: 222.2 84% 4.9%;
