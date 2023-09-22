@@ -6,6 +6,7 @@ import Navbar from '@/components/Atoms/global/Navbar'
 import { Suspense } from 'react'
 import Loading from './loading'
 import UnderConstructionMessage from '@/components/Atoms/global/UnderConstructionMessage'
+import NextTopLoader from 'nextjs-toploader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className='h-screen overflow-auto flex flex-col'>
+            <NextTopLoader showSpinner={false} />
             <UnderConstructionMessage />
             <Navbar />
             <Suspense fallback={<Loading />}>

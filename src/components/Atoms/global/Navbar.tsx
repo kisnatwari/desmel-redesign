@@ -19,7 +19,7 @@ const Navbar = (props: Props) => {
         <div className={`container flex justify-between items-center py-3 ${righteous.className}`}>
             <div className='flex items-center gap-2'>
                 <NavAvatar />
-                <span className='text-lg'>KISNATWARI</span>
+                <Link href={"/"} className='text-lg'>KISNATWARI</Link>
             </div>
             <div>
                 <nav>
