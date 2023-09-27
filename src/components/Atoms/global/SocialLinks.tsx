@@ -34,13 +34,13 @@ const links = [
 
 const SocialLinks = () => {
   return (
-    <div className='absolute bottom-0 right-1'>
+    <div className='absolute bottom-0 right-2'>
       <ul className="flex flex-col gap-2 opacity-75">
         {
           links.map((link, index) => {
             return (
               <li key={index}>
-                <a href={link.url} target='_blank' rel='noopener noreferrer'>
+                <a href={link.url} target='_blank' rel='noopener noreferrer' className='hover:text-[#5DBF8E] dark:hover:text-cyan-500'>
                     {link.icon}
                 </a>
               </li>
@@ -48,7 +48,7 @@ const SocialLinks = () => {
           })
         }
         <li>
-          <div className="h-56 w-0 border border-black dark:border-white mx-auto"></div>
+          <div className="h-52 w-0 border border-black dark:border-white mx-auto"></div>
         </li>
       </ul>
     </div>
