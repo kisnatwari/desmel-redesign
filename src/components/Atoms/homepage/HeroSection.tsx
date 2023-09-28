@@ -1,9 +1,7 @@
-"use client"
 import React from 'react'
-import { Saira } from 'next/font/google'
+import { Saira, Rubik_Glitch, Fira_Code } from 'next/font/google'
 import Image from 'next/image'
 import ResumeDownloader from './ResumeDownloader'
-import { useTheme } from 'next-themes'
 import HeroImage from './HeroImage'
 
 type Props = {}
@@ -15,26 +13,39 @@ const saira = Saira({
     style: 'normal'
 })
 
-const HeroSection = (props: Props) => {
+const rubik_glich = Rubik_Glitch({
+    subsets: ['latin'],
+    display: "swap",
+    weight: "400",
+    style: 'normal'
+})
 
-    const { theme } = useTheme();
+const fira_code = Fira_Code({
+    subsets: ['latin'],
+    display: "swap",
+    weight: "400",
+    style: 'normal'
+});
+
+const HeroSection = (props: Props) => {
 
     return (
         <div className={`container relative ${saira.className}`}>
             <div className='grid grid-cols-2 h-full backdrop-blur-sm'>
                 <div className='h-full flex flex-col gap-5 justify-center'>
                     <div className='flex flex-col gap-2 justify-center'>
-                        <p className='text-2xl text-yellow-300'>Hi, I&apos;m Krishna</p>
-                        <h2 className='text-xl text-ring'>
+                        <p className='text-2xl text-yellow-600 dark:text-yellow-300'>Hi, I&apos;m Krishna</p>
+                        <p className='text-xl text-ring'>
                             An IT Student of Nepal
                             <Image src={'/nepal-flag.png'} width={15} height={15} alt='Nepal Flag' className='inline-block ml-1' />
-                        </h2>
-                        <h3 className="text-3xl text-ring">I Build value Through Codes</h3>
+                        </p>
+                        <p className="text-3xl text-ring">I Build value Through Codes</p>
+                        <p className={`text-sm ${rubik_glich.className} text-lime-700 dark:text-cyan-600`}>&quot; I use Arch BTW &quot;</p>
                         <div>
-                            <ResumeDownloader />
+                            {<ResumeDownloader />}
                         </div>
                     </div>
-                    <div className='ml-auto'>
+                    <div className={`ml-auto ${fira_code.className}`}>
                         <p>while(noSuccess)&nbsp;{'{'}</p>
                         <p>&nbsp; tryAgain();</p>
                         <p>&nbsp; if(dead)</p>
@@ -44,7 +55,7 @@ const HeroSection = (props: Props) => {
                 </div>
                 <div className='flex flex-col gap-2 h-full justify-center'>
                     <div className='ml-auto'>
-                        <HeroImage/>
+                        {<HeroImage />}
                     </div>
                 </div>
             </div>

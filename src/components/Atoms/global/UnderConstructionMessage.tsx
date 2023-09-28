@@ -10,7 +10,7 @@ const UnderConstructionMessage = () => {
         return null;
 
     return (
-        <div className="container text-center relative w-full text-slate-300 pt-2">
+        <div className="container text-center relative w-full dark:text-slate-300 text-slate-600 pt-2">
             <small>
                 <strong>
                     This portfolio page is under construction. Please visit the old one for now <a href="https://kisnatwari.github.io" className='text-blue-500'>&nbsp;click here</a>

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Righteous } from 'next/font/google';
-import { Sun } from 'lucide-react';
 import Link from 'next/link';
 import { NavAvatar } from './NavAvatar';
 import { ModeToggle } from './ModeToggle';
@@ -15,7 +14,7 @@ const righteous = Righteous({
 type Props = {}
 
 const Navbar = (props: Props) => {
-    const linksClass = "hover:text-cyan-600 after:w-full after:scale-0 after:h-0.5 relative after:absolute after:bg-cyan-600 after:-bottom-1 after:left-0 px-1 hover:after:scale-100 duration-300 after:duration-300";
+    const linksClass = "hover:text-[#66BD8F] dark:hover:text-cyan-600 after:w-full after:scale-0 after:h-0.5 relative after:absolute after:bg-[#66BD8F] dark:after:bg-cyan-600 after:-bottom-1 after:left-0 px-1 hover:after:scale-100 duration-300 after:duration-300";
     return (
         <div className={`container flex justify-between items-center py-3 ${righteous.className}`}>
             <div className='flex items-center gap-2'>
