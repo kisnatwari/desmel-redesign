@@ -3,6 +3,7 @@ import { Righteous } from 'next/font/google';
 import { Sun } from 'lucide-react';
 import Link from 'next/link';
 import { NavAvatar } from './NavAvatar';
+import { ModeToggle } from './ModeToggle';
 
 const righteous = Righteous({
     subsets: ['latin'],
@@ -37,7 +38,7 @@ const Navbar = (props: Props) => {
                 </nav>
             </div>
             <div className='flex gap-4 items-center'>
-                <Sun size={20} />
+                <ModeToggle/>
                 <Link href={"/"}>Blogs</Link>
             </div>
         </div>

@@ -3,6 +3,8 @@ import React from 'react'
 import { Saira } from 'next/font/google'
 import Image from 'next/image'
 import ResumeDownloader from './ResumeDownloader'
+import { useTheme } from 'next-themes'
+import HeroImage from './HeroImage'
 
 type Props = {}
 
@@ -14,6 +16,8 @@ const saira = Saira({
 })
 
 const HeroSection = (props: Props) => {
+
+    const { theme } = useTheme();
 
     return (
         <div className={`container relative ${saira.className}`}>
@@ -27,7 +31,7 @@ const HeroSection = (props: Props) => {
                         </h2>
                         <h3 className="text-3xl text-ring">I Build value Through Codes</h3>
                         <div>
-                            <ResumeDownloader/>
+                            <ResumeDownloader />
                         </div>
                     </div>
                     <div className='ml-auto'>
@@ -40,7 +44,7 @@ const HeroSection = (props: Props) => {
                 </div>
                 <div className='flex flex-col gap-2 h-full justify-center'>
                     <div className='ml-auto'>
-                        <Image src={"/dark-person-img.jpeg"} alt='dark img' width={440} height={440} className='rounded-full' />
+                        <HeroImage/>
                     </div>
                 </div>
             </div>

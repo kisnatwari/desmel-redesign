@@ -15,11 +15,7 @@ export const metadata: Metadata = {
   description: 'A full stack web developer proficient in MERN Stack, NextJS, Laravel',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children, }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.jpeg" sizes="any" />
