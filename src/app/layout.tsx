@@ -7,6 +7,7 @@ import { Suspense } from 'react'
 import Loading from './loading'
 import UnderConstructionMessage from '@/components/Atoms/global/UnderConstructionMessage'
 import NextTopLoader from 'nextjs-toploader'
+import SocialLinks from '@/components/Atoms/global/SocialLinks'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -32,6 +33,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
             <Suspense fallback={<Loading />}>
               {children}
             </Suspense>
+            <SocialLinks/>
           </main>
         </ThemeProvider>
       </body>
