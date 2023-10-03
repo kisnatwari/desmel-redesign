@@ -79,12 +79,12 @@ const projects = [
 
 const page = () => {
   return (
-    <div className="container flex gap-2">
+    <div className="container flex flex-wrap gap-2">
       {
         projects.map((project, i) => (
-          <Card className='w-60 flex flex-col' key={i}>
+          <Card className='w-56 flex flex-col mx-auto sm:mx-0' key={i}>
             <CardContent className='p-0 rounded-lg overflow-hidden '>
-              <Image src={"/project-thumbnails/ims.jpg"} alt='' width={240} height={240} />
+              <Image src={"/project-thumbnails/ims.jpg"} alt='' width={224} height={224} />
             </CardContent>
             <CardContent className='px-2 pb-2'>
               <p className={`${righteous.className} line-clamp-2 mb-1`}>
