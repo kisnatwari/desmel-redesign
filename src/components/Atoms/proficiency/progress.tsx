@@ -16,9 +16,7 @@ const Progress = ({ name, image, proficiency, color = "" }: props) => {
     const [pct, setPct] = useState(0);
     useEffect(()=>setPct(proficiency), [proficiency]);
     return (
-        <div className='flex gap-4'>
-            {
-                <div className='text-center rounded-lg drop-shadow-lg bg-[#E1FBE9] dark:bg-[#233547] p-4'>
+                <div className='text-center rounded-lg w-full drop-shadow-lg bg-[#E1FBE9] dark:bg-[#233547] p-4'>
                     <p className='mb-1 flex gap-1 justify-center items-center '>
                         <Image src={image} alt={name} width={20} height={20} /> {name}
                     </p>
@@ -35,8 +33,6 @@ const Progress = ({ name, image, proficiency, color = "" }: props) => {
                         </CircularProgressbarWithChildren>
                     </div>
                 </div>
-            }
-        </div>
     )
 }
 

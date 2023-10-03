@@ -43,8 +43,8 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
                 </span>
               </div>
             </Suspense>
-            <SocialLinks />
           </main>
+          <SocialLinks />
         </ThemeProvider>
       </body>
     </html>

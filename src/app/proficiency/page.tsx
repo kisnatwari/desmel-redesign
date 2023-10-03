@@ -60,14 +60,14 @@ const TechStacks = [
 const page = () => {
     return (
         <div className={`container py-3 ${righteous.className}`}>
-            <h1 className='text-xl opacity-90 text-cyan-500'>First of all, take a look at my Education....</h1>
+            <h1 className='sm:text-xl text-lg opacity-90 text-cyan-500'>First of all, take a look at my Education....</h1>
             <div className='inline-block mx-auto'>
                 <Education />
             </div>
             <h1 className='text-xl opacity-90 text-cyan-500 mt-4 mb-1'>
                 Popular Experienced Tech Stacks
             </h1>
-            <div className='flex gap-2 flex-wrap'>
+            <div className='grid gap-2 grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-7'>
                 {
                     TechStacks.map((tech, index) => (
                         <Progress

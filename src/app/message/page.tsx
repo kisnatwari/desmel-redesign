@@ -1,6 +1,6 @@
 import React from 'react'
 import { Saira, Righteous } from 'next/font/google'
-import { Facebook, Github,  Instagram, Linkedin, Mail, X } from 'lucide-react'
+import { Facebook, Github, Instagram, Linkedin, Mail, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -33,10 +33,19 @@ const MessagePage = (props: Props) => {
           Let&apos;s connect and learn more about each other&lsquo;s work
         </p>
       </div>
-      <div className='grid grid-cols-2 flex-grow mb-40'>
-        <div className='h-full flex flex-col gap-5 justify-center'>
+
+      <div className='grid grid-cols-1 lg:grid-cols-2 flex-grow mb-40'>
+        <div className='flex flex-col mx-auto lg:mx-0 gap-2 h-full justify-center'>
+          <form action="" className="w-72 sm:w-96 mt-2 flex flex-col gap-2 rounded">
+            <Input type='email' placeholder='Enter your email address' />
+            <Input type='text' placeholder='Enter the subject' />
+            <Textarea placeholder='Enter the message here.....' />
+            <Button variant={'outline'} className='bg-primary-foreground/25 backdrop-blur-3xl border-primary/25'>Message Now</Button>
+          </form>
+        </div>
+        <div className='h-full text-center lg:text-start mx-auto lg:mx-0 my-5 flex flex-col gap-5 justify-center'>
           <div className='flex flex-col gap-4 justify-center'>
-            <p className={`text-3xl `}>Getting In Touch Is Easy</p>
+            <p className={`text-3xl`}>Getting In Touch Is Easy</p>
             <div>
               <p>Kawasoti-2, Nawalpur, Nepal</p>
               <p>27°39&apos;41.1&ldquo;N 84°08&#39;04.2&rdquo;E</p>
@@ -54,14 +63,6 @@ const MessagePage = (props: Props) => {
               </div>
             </div>
           </div>
-        </div>
-        <div className='flex flex-col gap-2 h-full justify-center'>
-          <form action="" className="w-96 mt-2 flex flex-col gap-2 rounded">
-            <Input type='email' placeholder='Enter your email address' />
-            <Input type='text' placeholder='Enter the subject' />
-            <Textarea placeholder='Enter the message here.....' />
-            <Button>Message Now</Button>
-          </form>
         </div>
       </div>
 
