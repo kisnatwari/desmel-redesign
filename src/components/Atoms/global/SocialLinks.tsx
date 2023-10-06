@@ -34,7 +34,7 @@ const links = [
 
 const SocialLinks = () => {
   return (
-    <div className='absolute bottom-0 right-2'>
+    <div className='fixed bottom-0 right-2 hidden sm:block'>
       <ul className="flex flex-col gap-2 opacity-75">
         {
           links.map((link, index) => {

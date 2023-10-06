@@ -32,9 +32,9 @@ const HeroSection = (props: Props) => {
 
     return (
         <div className={`container ${saira.className}`}>
-            <div className='grid grid-cols-2 h-full'>
+            <div className='grid grid-cols-1 reverse sm:grid-cols-2 h-full'>
                 <div className='h-full flex flex-col gap-5 justify-center'>
-                    <div className='flex flex-col gap-2 justify-center'>
+                    <div className='flex flex-col gap-2 justify-center py-5'>
                         <p className='text-2xl text-yellow-600 dark:text-yellow-300'>Hi, I&apos;m Krishna Tiwari</p>
                         <p className="text-xl text-ring">
                             A Full Stack Web Developer
@@ -44,13 +44,13 @@ const HeroSection = (props: Props) => {
                             An IT Student of Nepal
                             <Image src={'/nepal-flag.png'} width={15} height={15} alt='Nepal Flag' className='inline-block ml-1' />
                         </p>
-                        <p className="text-3xl text-ring">I Build value Through Codes</p>
+                        <p className="text-2xl sm:text-3xl text-ring">I Build value Through Codes</p>
                         <p className={`text-sm ${rubik_glich.className} text-lime-700 dark:text-cyan-600`}>&quot; I use Arch BTW &quot;</p>
                         <div>
                             {<ResumeDownloader />}
                         </div>
                     </div>
-                    <div className={`ml-auto ${fira_code.className}`}>
+                    <div className={`mx-auto sm:mx-0 sm:ml-auto py-5 ${fira_code.className}`}>
                         <p>while(noSuccess)&nbsp;{'{'}</p>
                         <p>&nbsp; tryAgain();</p>
                         <p>&nbsp; if(dead)</p>
