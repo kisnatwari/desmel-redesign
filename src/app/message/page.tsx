@@ -24,17 +24,6 @@ const righteous = Righteous({
 
 const MessagePage = (props: Props) => {
 
-  type SocialProps = {
-    icon: JSX.Element,
-  }
-  const SocialCircle = ({ icon }: SocialProps) => {
-    return (
-      <div className='flex items-center justify-center w-14 h-14 border border-primary rounded-full hover:bg-primary hover:text-secondary duration-200 cursor-pointer'>
-        {icon}
-      </div>
-    )
-  }
-
   return (
     <div className={`container flex flex-col flex-grow gap-10 h-full relative ${saira.className}`}>
       <div className='flex flex-col gap-2 justify-center items-center py-5'>
@@ -77,6 +66,18 @@ const MessagePage = (props: Props) => {
       </div>
 
     </div >
+  )
+}
+
+type SocialProps = {
+  icon: JSX.Element,
+}
+
+export function SocialCircle({ icon }: SocialProps) {
+  return (
+    <div className='flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 border border-primary rounded-full hover:bg-primary hover:text-secondary duration-200 cursor-pointer'>
+      {icon}
+    </div>
   )
 }
 
