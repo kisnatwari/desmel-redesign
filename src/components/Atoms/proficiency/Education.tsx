@@ -8,6 +8,12 @@ const educationalDetails = [
         "end": "2019"
     },
     {
+        "institution": "WAP Institute",
+        "qualification": "Advance Diploma in Software Engineering (ADSE)",
+        "start": "2019",
+        "end": "2023"
+    },
+    {
         "institution": "Lumbini ICT Campus",
         "qualification": "Bachelor's in Computer Application",
         "start": "2019",
