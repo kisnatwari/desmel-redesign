@@ -14,6 +14,7 @@ const projects = [
   {
     title: 'Inventory Management System',
     description: 'An inventory management system is a combination of technology (hardware and software) and processes and procedures that oversee the monitoring and maintenance of stocked products, whether those products are company assets, raw materials and supplies, or finished products ready to be sent to vendors or end consumers.',
+    image: "ims.jpg",
     tags: [
       {
         name: 'PHP',
@@ -28,6 +29,7 @@ const projects = [
   {
     title: 'Location based multivendor ecommerce marketplace',
     description: 'A location-based multivendor ecommerce marketplace is an online platform that allows multiple vendors to sell their products or services on a single website, much like a shopping mall with various stores. The platform is designed to help businesses create and run an online marketplace for managing multiple vendors, products, and services',
+    image: "ecom.jpg",
     tags: [
       {
         name: 'jQuery',
@@ -42,6 +44,7 @@ const projects = [
   {
     title: "Online Food ordering system",
     description: "A food ordering system is a web application that allows customers to order food from a variety of restaurants and take the order online. The application is designed to help customers order food from a variety of restaurants and take the order online.",
+    image: "food-ordering.png",
     tags: [
       {
         name: 'NextJS',
@@ -60,6 +63,7 @@ const projects = [
   {
     title: "Image gallery application",
     description: "An image gallery application is a web application that allows customers to upload images and view them in a gallery. The application is designed to help customers upload images and view them in a gallery.",
+    image: "image-gallery.jpg",
     tags: [
       {
         name: 'Laravel',
@@ -83,8 +87,8 @@ const page = () => {
       {
         projects.map((project, i) => (
           <Card className='w-56 flex flex-col mx-auto sm:mx-0' key={i}>
-            <CardContent className='p-0 rounded-lg overflow-hidden '>
-              <Image src={"/project-thumbnails/ims.jpg"} alt='' width={224} height={224} />
+            <CardContent className='p-0 rounded-lg overflow-hidden h-56 w-56'>
+              <Image src={`/project-thumbnails/${project.image}`} alt='' width={224} height={224} className='w-full h-full object-cover' />
             </CardContent>
             <CardContent className='px-2 pb-2'>
               <p className={`${righteous.className} line-clamp-2 mb-1`}>
