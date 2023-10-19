@@ -1,10 +1,16 @@
 'use client'
 import { XCircle } from 'lucide-react'
+import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
 
 type Props = {}
 
 const UnderConstructionMessage = () => {
+    const router = useRouter();
+    router.prefetch("/");
+    router.prefetch("/projects");
+    router.prefetch("/proficiency");
+    router.prefetch("/message");
     const [showMessage, setShowMessage] = useState(true);
     if (!showMessage)
         return null;
