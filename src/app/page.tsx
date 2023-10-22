@@ -1,10 +1,9 @@
-import Navbar from '@/components/Atoms/Navbar'
-import Image from 'next/image'
+import HeroSection from '@/components/Atoms/homepage/HeroSection'
 
 export default function Home() {
   return (
-    <main className="">
-      <Navbar />
-    </main>
+    <div className='flex-grow h-full flex'>
+      <HeroSection />
+    </div>
   )
 }
